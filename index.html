@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Regularización Extraordinaria 2026 — Guía de Ayuda</title>
+<meta name="description" content="Guía informativa multilingüe sobre la regularización extraordinaria de personas migrantes en España 2026: requisitos, documentación, plazos y enlaces oficiales." />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --brand: #0f766e;        /* teal-700 */
+    --brand-dark: #115e59;   /* teal-800 */
+    --brand-soft: #ccfbf1;   /* teal-100 */
+    --accent: #d97706;       /* amber-600 */
+    --accent-soft: #fef3c7;  /* amber-100 */
+  }
+  html, body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  html[lang="ar"], html[lang="ur"] { font-family: 'Noto Sans Arabic', 'Inter', sans-serif; }
+  html[lang="bn"] { font-family: 'Noto Sans Bengali', 'Inter', sans-serif; }
+  html[lang="zh"] { font-family: 'Noto Sans SC', 'Inter', sans-serif; }
+  html[dir="rtl"] { direction: rtl; }
+  h1, h2, h3, .font-display { font-family: 'Fraunces', Georgia, serif; font-feature-settings: "ss01"; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3,
+  html[lang="ur"] h1, html[lang="ur"] h2, html[lang="ur"] h3 { font-family: 'Noto Sans Arabic', serif; }
+  html[lang="bn"] h1, html[lang="bn"] h2, html[lang="bn"] h3 { font-family: 'Noto Sans Bengali', serif; }
+  html[lang="zh"] h1, html[lang="zh"] h2, html[lang="zh"] h3 { font-family: 'Noto Sans SC', serif; }
+  .prose-custom h2 { font-size:1.75rem; font-weight:700; margin-top:2.25rem; margin-bottom:.75rem; color:#134e4a; letter-spacing:-0.01em; }
+  .prose-custom h3 { font-size:1.15rem; font-weight:600; margin-top:1.25rem; margin-bottom:.5rem; color:#115e59; }
+  .prose-custom ul { list-style:disc; padding-inline-start:1.5rem; margin:.5rem 0; }
+  .prose-custom p { margin:.5rem 0; line-height:1.7; }
+  details { border:1px solid #e5e7eb; border-radius:.5rem; padding:.75rem 1rem; margin:.5rem 0; background:#fff; }
+  details[open] { background:#f0fdfa; border-color:#99f6e4; }
+  summary { cursor:pointer; font-weight:600; color:#115e59; }
+
+  .hero-wrap { position:relative; overflow:hidden; background: linear-gradient(135deg, #0f766e 0%, #115e59 60%, #134e4a 100%); }
+  .hero-collage { position:absolute; inset:0; pointer-events:none; display:flex; flex-wrap:wrap; align-content:center; justify-content:center; gap:.25rem 1.25rem; opacity:.11; font-family:'Fraunces', serif; font-weight:900; font-size:clamp(1.75rem, 4.5vw, 3.5rem); line-height:1; color:#fff; padding:1rem; }
+  .hero-collage span { white-space:nowrap; }
+  .hero-content { position:relative; z-index:1; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<header class="bg-white border-b sticky top-0 z-10">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-8 h-8 rounded bg-teal-700 text-white grid place-items-center font-bold font-display">i</span>
+      <strong data-i18n="brand">Regularización 2026</strong>
+    </div>
+    <nav class="hidden md:flex gap-4 text-sm">
+      <a href="#que-es" data-i18n="nav.what">Qué es</a>
+      <a href="#requisitos" data-i18n="nav.req">Requisitos</a>
+      <a href="#vulnerabilidad" data-i18n="nav.vuln">Vulnerabilidad</a>
+      <a href="#docs" data-i18n="nav.docs">Docs</a>
+      <a href="#plazos" data-i18n="nav.dates">Plazos</a>
+      <a href="#oficinas" data-i18n="nav.map">Oficinas</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#enlaces" data-i18n="nav.links">Enlaces</a>
+    </nav>
+    <select id="lang" class="border rounded px-2 py-1 text-sm bg-white">
+      <option value="es">Español</option>
+      <option value="ca">Català</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="ar">العربية</option>
+      <option value="ro">Română</option>
+      <option value="pt">Português</option>
+      <option value="uk">Українська</option>
+      <option value="ru">Русский</option>
+      <option value="zh">中文</option>
+      <option value="ur">اردو</option>
+      <option value="wo">Wolof</option>
+      <option value="bn">বাংলা</option>
+    </select>
+  </div>
+</header>
+
+<div class="bg-amber-100 border-b border-amber-300 text-amber-900 text-sm">
+  <div class="max-w-5xl mx-auto px-4 py-2 flex items-start gap-2">
+    <span>ℹ️</span>
+    <p><strong>Sitio no oficial.</strong> Esta web ciudadana sin ánimo de lucro solo recoge y enlaza información publicada en sitios gubernamentales oficiales (inclusion.gob.es, BOE, ayuntamientos, Mercurio). No gestiona trámites ni sustituye al Ministerio. <a href="./aviso-legal.html" class="underline font-semibold">Aviso legal y privacidad →</a></p>
+  </div>
+</div>
+
+<section class="hero-wrap text-white">
+  <div class="hero-collage" aria-hidden="true">
+    <span>Bienvenido</span><span>Welcome</span><span>Benvingut</span><span>Bienvenue</span>
+    <span>أهلاً</span><span>Bun venit</span><span>Bem-vindo</span><span>Ласкаво просимо</span>
+    <span>Добро пожаловать</span><span>欢迎</span><span>خوش آمدید</span><span>Dalal ak jàmm</span><span>স্বাগতম</span>
+  </div>
+  <div class="hero-content max-w-5xl mx-auto px-4 py-16">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight" data-i18n="hero.title">Regularización Extraordinaria para Personas Migrantes — España 2026</h1>
+    <p class="mt-4 text-lg md:text-xl opacity-95 max-w-3xl" data-i18n="hero.subtitle">Información clara, oficial y en tu idioma. Web ciudadana de ayuda.</p>
+    <div class="mt-6 text-sm bg-black/25 backdrop-blur rounded-lg p-3 max-w-3xl" data-i18n="hero.disclaimer">Esta web es informativa. Los trámites oficiales solo se realizan en inclusion.gob.es y oficinas autorizadas. Nunca pagues a intermediarios no acreditados.</div>
+    <div class="mt-3 inline-block text-xs font-semibold bg-amber-300 text-teal-900 rounded-full px-3 py-1" id="nonprofit-badge">Web de ayuda ciudadana · sin ánimo de lucro · independiente</div>
+  </div>
+</section>
+
+<main class="max-w-5xl mx-auto px-4 py-8 prose-custom">
+
+  <section id="que-es">
+    <h2 data-i18n="what.h">¿Qué es?</h2>
+    <p data-i18n="what.p"></p>
+  </section>
+
+  <section id="requisitos">
+    <h2 data-i18n="req.h">Requisitos principales</h2>
+    <ul id="req-list"></ul>
+    <p class="text-sm text-slate-600" data-i18n="req.note">Los requisitos pueden variar según tu situación (arraigo social, laboral, familiar, de formación). Consulta siempre la fuente oficial.</p>
+  </section>
+
+  <section id="vulnerabilidad" class="bg-amber-50 border border-amber-200 rounded-lg p-5 my-6">
+    <h2 data-i18n="vuln.h">Certificado de Vulnerabilidad</h2>
+    <p data-i18n="vuln.p"></p>
+    <h3 data-i18n="vuln.who.h">¿Quién puede solicitarlo?</h3>
+    <ul id="vuln-who"></ul>
+    <h3 data-i18n="vuln.how.h">¿Cómo se solicita?</h3>
+    <ul id="vuln-how"></ul>
+    <h3 data-i18n="vuln.docs.h">Documentación habitual</h3>
+    <ul id="vuln-docs"></ul>
+    <p class="text-sm text-amber-800 mt-3" data-i18n="vuln.note">El informe lo emiten los Servicios Sociales del ayuntamiento donde estés empadronado/a. Es gratuito.</p>
+  </section>
+
+  <section id="docs">
+    <h2 data-i18n="docs.h">Documentación habitual</h2>
+    <ul id="docs-list"></ul>
+  </section>
+
+  <section id="plazos">
+    <h2 data-i18n="dates.h">Plazos y cómo solicitar</h2>
+    <p data-i18n="dates.p"></p>
+    <ul id="dates-list"></ul>
+  </section>
+
+  <section id="oficinas">
+    <h2 data-i18n="map.h">Oficinas de Extranjería y cita previa</h2>
+    <p data-i18n="map.p">Mapa con las principales Oficinas de Extranjería en España. La cita previa es obligatoria y se pide solo en la web oficial.</p>
+    <div class="flex flex-wrap gap-3 my-3">
+      <a href="https://icp.administracionelectronica.gob.es/icpplus/index.html" target="_blank" rel="noopener"
+         class="bg-teal-700 hover:bg-teal-800 text-white font-semibold px-4 py-2 rounded" data-i18n="map.cta">Pedir cita previa (web oficial)</a>
+      <a href="https://sede.administracionespublicas.gob.es/pagina/index/directorio/icpplus" target="_blank" rel="noopener"
+         class="border border-teal-700 text-teal-700 hover:bg-teal-50 font-semibold px-4 py-2 rounded" data-i18n="map.cta2">Ver directorio oficial</a>
+      <a href="https://sede.administracionespublicas.gob.es/pagina/index/directorio/mercurio2" target="_blank" rel="noopener"
+         class="border border-teal-700 text-teal-700 hover:bg-teal-50 font-semibold px-4 py-2 rounded">Mercurio — directorio oficial</a>
+    </div>
+    <div id="map" class="w-full h-[420px] rounded-lg border border-slate-200 bg-slate-100"></div>
+    <p class="text-xs text-slate-500 mt-2" data-i18n="map.note">Ubicaciones aproximadas. Confirma dirección y horario en la web oficial antes de acudir.</p>
+  </section>
+
+  <section id="faq">
+    <h2 data-i18n="faq.h">Preguntas frecuentes</h2>
+    <div id="faq-list"></div>
+  </section>
+
+  <section id="enlaces">
+    <h2 data-i18n="links.h">Enlaces oficiales y de apoyo</h2>
+    <ul class="list-disc ps-6 space-y-1">
+      <li><a class="text-teal-700 underline" href="https://www.inclusion.gob.es/formulario-consultas-regularizacion-extraordinaria-2026" target="_blank" rel="noopener">Ministerio de Inclusión — Formulario de consultas</a></li>
+      <li><a class="text-teal-700 underline" href="https://revista.seg-social.es/-/preguntas-y-respuestas-sobre-la-regularizaci%C3%B3n-extraordinaria-de-migrantes" target="_blank" rel="noopener">Seguridad Social — Preguntas y respuestas</a></li>
+      <li><a class="text-teal-700 underline" href="https://mptmd.gob.es/content/dam/mpt/delegaciones_gobierno/delegaciones/paisvasco/proyectos-ci/migraciones-e-integraci%C3%B3n--regularizaci%C3%B3n-extraordinaria-2026/REGULARIZACI%C3%93N%20EXTRAORDINARIA%202026.pdf" target="_blank" rel="noopener">Delegación del Gobierno — PDF oficial</a></li>
+      <li><a class="text-teal-700 underline" href="https://www.correos.es/es/es/particulares/para-el-ciudadano/regularizacion-extraordinaria-personas-migrantes" target="_blank" rel="noopener">Correos — Información de trámites</a></li>
+      <li><a class="text-teal-700 underline" href="https://ajuntament.barcelona.cat/ciutatvella/es/noticias/informacion-sobre-la-regularizacion-extraordinaria-para-personas-migrantes-del-gobierno-espanol-1596973" target="_blank" rel="noopener">Ajuntament de Barcelona — Ciutat Vella</a></li>
+      <li><a class="text-teal-700 underline" href="https://www.cear.es/noticias/regularizacion-extraordinaria-preguntas-y-respuestas/" target="_blank" rel="noopener">CEAR — Preguntas y respuestas</a></li>
+      <li><a class="text-teal-700 underline" href="https://www.abogadadeextranjeria.es/requisitos-de-la-nueva-regularizaci%C3%B3n-extraordinaria-anunciada-por-el-gobierno/" target="_blank" rel="noopener">Análisis jurídico — Requisitos</a></li>
+      <li><a class="text-teal-700 underline" href="https://infoextranjeria.org/2026/04/15/regularizacion-extraordinaria-para-personas-migrantes/" target="_blank" rel="noopener">InfoExtranjería — Regularización extraordinaria</a></li>
+      <li><a class="text-teal-700 underline" href="https://martinezcaballeroabogados.com/regularizacion-extraordinaria-espana-2026/" target="_blank" rel="noopener">Martínez Caballero Abogados — Guía 2026</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<button id="voice-btn" aria-label="Voice assistant" title="Voice assistant"
+  class="fixed bottom-5 end-5 z-20 w-14 h-14 rounded-full bg-teal-700 hover:bg-teal-800 text-white shadow-lg grid place-items-center text-2xl">🎤</button>
+<div id="voice-panel" class="fixed bottom-24 end-5 z-20 w-80 max-w-[92vw] bg-white border rounded-lg shadow-xl p-4 hidden">
+  <div class="flex justify-between items-center mb-2">
+    <strong data-i18n="voice.title">Asistente de voz</strong>
+    <button id="voice-close" class="text-slate-500 hover:text-slate-800">✕</button>
+  </div>
+  <p class="text-xs text-slate-600 mb-2" data-i18n="voice.hint">Pulsa el micrófono y pregunta: requisitos, documentos, plazos, cita, vulnerabilidad, abogado, rechazo, fraude.</p>
+  <div id="voice-log" class="text-sm bg-slate-50 rounded p-2 h-40 overflow-auto mb-2"></div>
+  <div class="flex gap-2">
+    <button id="voice-listen" class="flex-1 bg-teal-700 hover:bg-teal-800 text-white rounded px-3 py-2" data-i18n="voice.listen">Hablar</button>
+    <button id="voice-stop" class="border rounded px-3 py-2" data-i18n="voice.stop">Parar</button>
+  </div>
+  <p id="voice-unsupported" class="text-xs text-amber-700 mt-2 hidden" data-i18n="voice.unsupported">Tu navegador no soporta reconocimiento de voz. Usa Chrome o Edge.</p>
+</div>
+
+<footer class="border-t bg-white mt-12">
+  <div class="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-600 flex flex-col md:flex-row justify-between gap-2">
+    <span data-i18n="footer.note">Web informativa, no oficial. Fuentes: Gobierno de España, CEAR, Ayuntamientos.</span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+const I18N = {
+  es: {
+    "brand":"Regularización 2026",
+    "nav.what":"Qué es","nav.req":"Requisitos","nav.docs":"Documentación","nav.dates":"Plazos","nav.faq":"FAQ","nav.links":"Enlaces",
+    "hero.title":"Regularización Extraordinaria para Personas Migrantes — España 2026",
+    "hero.subtitle":"Información clara, oficial y en tu idioma. Web de ayuda ciudadana.",
+    "hero.disclaimer":"Esta web es informativa. Los trámites oficiales solo se realizan en inclusion.gob.es y oficinas autorizadas. Nunca pagues a intermediarios no acreditados.",
+    "what.h":"¿Qué es?",
+    "what.p":"La regularización extraordinaria 2026 es un proceso impulsado por el Gobierno de España para permitir que personas migrantes que ya residen en el país obtengan una autorización de residencia y trabajo, facilitando su integración social y laboral.",
+    "req.h":"Requisitos principales",
+    "req":["Encontrarse en España antes de la fecha de referencia fijada por el Real Decreto.","No tener antecedentes penales en España ni en el país de origen.","Presentar documento de identidad o pasaporte en vigor.","Acreditar el tiempo de permanencia mediante empadronamiento, certificados o informes.","Cumplir los requisitos específicos de la vía elegida (arraigo social, laboral, familiar o de formación)."],
+    "req.note":"Los requisitos pueden variar según tu situación. Consulta siempre la fuente oficial.",
+    "docs.h":"Documentación habitual",
+    "docs":["Pasaporte completo en vigor.","Certificado de empadronamiento histórico.","Certificado de antecedentes penales (país de origen, apostillado/legalizado y traducido).","Contrato de trabajo o oferta firme (si aplica).","Informe de arraigo emitido por la comunidad autónoma (si aplica).","Justificante del pago de la tasa 790-052."],
+    "dates.h":"Plazos y cómo solicitar",
+    "dates.p":"El procedimiento se tramita a través de la sede electrónica del Ministerio y, en algunos casos, presencialmente vía cita previa u oficinas de Correos autorizadas.",
+    "dates":["Consulta el Real Decreto en el BOE para conocer la fecha de entrada en vigor y el plazo de solicitud.","Solicita cita previa en la Oficina de Extranjería correspondiente a tu provincia.","Prepara toda la documentación antes de acudir; los expedientes incompletos son rechazados.","Guarda el resguardo de presentación: prueba la fecha de tu solicitud."],
+    "faq.h":"Preguntas frecuentes",
+    "faq":[
+      ["¿Necesito abogado?","No es obligatorio. Organizaciones como CEAR, Cruz Roja o los servicios sociales municipales ofrecen orientación gratuita."],
+      ["¿Qué pasa si tengo una orden de expulsión?","Cada caso se valora individualmente. Consulta con un servicio jurídico especializado antes de solicitar."],
+      ["¿Puedo trabajar mientras se resuelve?","Depende de la vía. La autorización habilita para trabajar una vez concedida."],
+      ["¿Qué hago si me rechazan?","Puedes presentar recurso de reposición o contencioso-administrativo en los plazos legales."],
+      ["¿Dónde denuncio fraudes?","En Policía Nacional o en la web del Ministerio. Desconfía de quien cobre por 'asegurar' tu expediente."]
+    ],
+    "links.h":"Enlaces oficiales y de apoyo",
+    "footer.note":"Web informativa, no oficial. Fuentes: Gobierno de España, CEAR, Ayuntamientos."
+  },
+  ca: {
+    "brand":"Regularització 2026",
+    "nav.what":"Què és","nav.req":"Requisits","nav.docs":"Documentació","nav.dates":"Terminis","nav.faq":"FAQ","nav.links":"Enllaços",
+    "hero.title":"Regularització Extraordinària per a Persones Migrants — Espanya 2026",
+    "hero.subtitle":"Informació clara, oficial i en la teva llengua. Web d'ajuda ciutadana.",
+    "hero.disclaimer":"Aquesta web és informativa. Els tràmits oficials només es fan a inclusion.gob.es i oficines autoritzades. No paguis mai a intermediaris no acreditats.",
+    "what.h":"Què és?",
+    "what.p":"La regularització extraordinària 2026 és un procés impulsat pel Govern d'Espanya perquè persones migrants que ja resideixen al país obtinguin autorització de residència i treball.",
+    "req.h":"Requisits principals",
+    "req":["Trobar-se a Espanya abans de la data de referència fixada pel Reial Decret.","No tenir antecedents penals a Espanya ni al país d'origen.","Presentar document d'identitat o passaport vigent.","Acreditar el temps de permanència amb empadronament o informes.","Complir els requisits específics de la via escollida (arrelament social, laboral, familiar o de formació)."],
+    "req.note":"Els requisits poden variar segons la teva situació. Consulta sempre la font oficial.",
+    "docs.h":"Documentació habitual",
+    "docs":["Passaport complet en vigor.","Certificat d'empadronament històric.","Certificat d'antecedents penals del país d'origen, apostil·lat i traduït.","Contracte de treball o oferta ferma (si aplica).","Informe d'arrelament emès per la comunitat autònoma (si aplica).","Justificant del pagament de la taxa 790-052."],
+    "dates.h":"Terminis i com sol·licitar-ho",
+    "dates.p":"El procediment es tramita a la seu electrònica del Ministeri i, en alguns casos, presencialment amb cita prèvia o a oficines de Correus autoritzades.",
+    "dates":["Consulta el Reial Decret al BOE per conèixer la data d'entrada en vigor i el termini.","Demana cita prèvia a l'Oficina d'Estrangeria de la teva província.","Prepara tota la documentació abans d'anar-hi.","Guarda el resguard de presentació: prova la data de la sol·licitud."],
+    "faq.h":"Preguntes freqüents",
+    "faq":[
+      ["Necessito advocat?","No és obligatori. CEAR, Creu Roja o serveis socials municipals ofereixen orientació gratuïta."],
+      ["Què passa si tinc ordre d'expulsió?","Cada cas es valora individualment. Consulta un servei jurídic especialitzat."],
+      ["Puc treballar mentre es resol?","Depèn de la via. L'autorització habilita per treballar un cop concedida."],
+      ["Què faig si em denequen?","Pots presentar recurs de reposició o contenciós-administratiu."],
+      ["On denuncio fraus?","A la Policia Nacional o al web del Ministeri."]
+    ],
+    "links.h":"Enllaços oficials i de suport",
+    "footer.note":"Web informativa, no oficial. Fonts: Govern d'Espanya, CEAR, Ajuntaments."
+  },
+  en: {
+    "brand":"Regularization 2026",
+    "nav.what":"Overview","nav.req":"Requirements","nav.docs":"Documents","nav.dates":"Deadlines","nav.faq":"FAQ","nav.links":"Links",
+    "hero.title":"Extraordinary Regularization for Migrants — Spain 2026",
+    "hero.subtitle":"Clear, official information in your language. Community help website.",
+    "hero.disclaimer":"This is an informational site. Official procedures are only handled at inclusion.gob.es and authorized offices. Never pay unaccredited intermediaries.",
+    "what.h":"What is it?",
+    "what.p":"The 2026 extraordinary regularization is a Spanish Government process that allows migrants already living in Spain to obtain a residence and work permit, easing their social and labour integration.",
+    "req.h":"Main requirements",
+    "req":["Being in Spain before the reference date set by the Royal Decree.","No criminal record in Spain or in your country of origin.","Valid passport or ID document.","Proof of time in Spain (padrón registration, certificates, social reports).","Meeting the specific requirements of the chosen route (social, labour, family or training arraigo)."],
+    "req.note":"Requirements vary by situation. Always check the official source.",
+    "docs.h":"Common documents",
+    "docs":["Valid full passport.","Historic padrón (municipal registration) certificate.","Criminal record certificate from country of origin (apostilled and translated).","Work contract or firm job offer (if applicable).","Arraigo report from the regional government (if applicable).","Proof of payment of fee 790-052."],
+    "dates.h":"Deadlines and how to apply",
+    "dates.p":"The procedure is filed through the Ministry's online portal and, in some cases, in person via appointment or at authorized Correos offices.",
+    "dates":["Check the Royal Decree in the BOE for entry-into-force date and application window.","Book an appointment at the Immigration Office for your province.","Prepare all documents beforehand — incomplete files are rejected.","Keep the submission receipt: it proves your application date."],
+    "faq.h":"Frequently asked questions",
+    "faq":[
+      ["Do I need a lawyer?","Not mandatory. NGOs like CEAR or Red Cross and municipal social services offer free guidance."],
+      ["What if I have an expulsion order?","Each case is assessed individually. Consult specialised legal services first."],
+      ["Can I work while it's being processed?","Depends on the route. The permit authorises work once granted."],
+      ["What if I'm rejected?","You can file an administrative appeal within the legal deadlines."],
+      ["Where to report fraud?","National Police or the Ministry's website. Distrust anyone who charges to 'guarantee' your file."]
+    ],
+    "links.h":"Official and support links",
+    "footer.note":"Informational, non-official website. Sources: Spanish Government, CEAR, city councils."
+  },
+  fr: {
+    "brand":"Régularisation 2026",
+    "nav.what":"Présentation","nav.req":"Conditions","nav.docs":"Documents","nav.dates":"Délais","nav.faq":"FAQ","nav.links":"Liens",
+    "hero.title":"Régularisation Extraordinaire des Personnes Migrantes — Espagne 2026",
+    "hero.subtitle":"Information claire, officielle et dans votre langue.",
+    "hero.disclaimer":"Site informatif. Les démarches officielles se font uniquement sur inclusion.gob.es et dans les bureaux autorisés. Ne payez jamais un intermédiaire non accrédité.",
+    "what.h":"De quoi s'agit-il ?",
+    "what.p":"La régularisation extraordinaire 2026 est un processus du Gouvernement espagnol permettant aux personnes migrantes déjà présentes en Espagne d'obtenir un titre de séjour et de travail.",
+    "req.h":"Conditions principales",
+    "req":["Se trouver en Espagne avant la date de référence fixée par le Décret Royal.","Pas d'antécédents judiciaires en Espagne ni dans le pays d'origine.","Pièce d'identité ou passeport en cours de validité.","Justifier le temps de résidence (empadronamiento, certificats, rapports).","Remplir les conditions de la voie choisie (arraigo social, professionnel, familial ou de formation)."],
+    "req.note":"Les conditions varient selon la situation. Consultez toujours la source officielle.",
+    "docs.h":"Documents habituels",
+    "docs":["Passeport complet en cours de validité.","Certificat d'empadronamiento historique.","Casier judiciaire du pays d'origine (apostillé et traduit).","Contrat de travail ou offre ferme (le cas échéant).","Rapport d'arraigo émis par la communauté autonome (le cas échéant).","Justificatif de paiement de la taxe 790-052."],
+    "dates.h":"Délais et démarche",
+    "dates.p":"La procédure se fait via le portail en ligne du Ministère, ou sur rendez-vous en préfecture / bureaux Correos autorisés.",
+    "dates":["Consultez le Décret Royal au BOE pour la date d'entrée en vigueur.","Prenez rendez-vous au Bureau des Étrangers de votre province.","Préparez tous les documents avant le rendez-vous.","Conservez le récépissé de dépôt : il prouve la date."],
+    "faq.h":"Questions fréquentes",
+    "faq":[
+      ["Ai-je besoin d'un avocat ?","Non obligatoire. CEAR, Croix-Rouge et services sociaux municipaux proposent une aide gratuite."],
+      ["Et si j'ai un arrêté d'expulsion ?","Chaque cas s'évalue individuellement. Consultez un service juridique spécialisé."],
+      ["Puis-je travailler pendant l'instruction ?","Cela dépend de la voie. L'autorisation permet de travailler une fois accordée."],
+      ["Que faire en cas de refus ?","Vous pouvez former un recours gracieux ou contentieux."],
+      ["Où dénoncer des fraudes ?","Police Nationale ou site du Ministère."]
+    ],
+    "links.h":"Liens officiels et d'aide",
+    "footer.note":"Site informatif non officiel. Sources : Gouvernement d'Espagne, CEAR, mairies."
+  },
+  ar: {
+    "brand":"التسوية 2026",
+    "nav.what":"ما هي","nav.req":"الشروط","nav.docs":"الوثائق","nav.dates":"المواعيد","nav.faq":"أسئلة","nav.links":"روابط",
+    "hero.title":"التسوية الاستثنائية للمهاجرين — إسبانيا 2026",
+    "hero.subtitle":"معلومات واضحة ورسمية بلغتك. موقع مساعدة للمواطنين.",
+    "hero.disclaimer":"هذا الموقع للمعلومات فقط. الإجراءات الرسمية تتم عبر inclusion.gob.es والمكاتب المعتمدة. لا تدفع أبدًا لوسطاء غير معتمدين.",
+    "what.h":"ما هي؟",
+    "what.p":"التسوية الاستثنائية 2026 عملية أطلقتها الحكومة الإسبانية لتمكين المهاجرين المقيمين بالفعل في البلاد من الحصول على إذن الإقامة والعمل.",
+    "req.h":"الشروط الأساسية",
+    "req":["التواجد في إسبانيا قبل التاريخ المرجعي المحدد بالمرسوم الملكي.","عدم وجود سوابق جنائية في إسبانيا أو بلد الأصل.","جواز سفر أو وثيقة هوية سارية.","إثبات مدة الإقامة عبر شهادة التسجيل البلدي والتقارير.","استيفاء شروط المسار المختار (اجتماعي، عمل، عائلي أو تكوين)."],
+    "req.note":"تختلف الشروط بحسب الحالة. راجع دائماً المصدر الرسمي.",
+    "docs.h":"الوثائق المعتادة",
+    "docs":["جواز سفر ساري المفعول.","شهادة تسجيل بلدي (padrón) تاريخية.","شهادة السجل العدلي من بلد الأصل مصدقة ومترجمة.","عقد عمل أو عرض ثابت (عند الاقتضاء).","تقرير الاندماج من الحكومة الإقليمية (عند الاقتضاء).","إيصال دفع الرسم 790-052."],
+    "dates.h":"المواعيد وكيفية التقديم",
+    "dates.p":"يُقدَّم الطلب عبر البوابة الإلكترونية للوزارة أو حضورياً بموعد مسبق أو في مكاتب Correos المعتمدة.",
+    "dates":["راجع المرسوم الملكي في BOE لمعرفة تاريخ السريان ومدة التقديم.","احجز موعداً في مكتب الهجرة بمقاطعتك.","جهّز كل الوثائق قبل الذهاب.","احتفظ بإيصال التقديم كدليل على التاريخ."],
+    "faq.h":"أسئلة شائعة",
+    "faq":[
+      ["هل أحتاج محامياً؟","ليس إلزامياً. CEAR والصليب الأحمر والخدمات الاجتماعية البلدية تقدم استشارات مجانية."],
+      ["ماذا لو كان لديّ أمر إبعاد؟","كل حالة تُدرس على حدة. استشر خدمة قانونية مختصة."],
+      ["هل يمكنني العمل أثناء الدراسة؟","يعتمد على المسار. يُسمح بالعمل بعد منح الإذن."],
+      ["ماذا لو رُفض طلبي؟","يمكنك تقديم طعن إداري ضمن المهل القانونية."],
+      ["أين أبلّغ عن الاحتيال؟","الشرطة الوطنية أو موقع الوزارة."]
+    ],
+    "links.h":"روابط رسمية وداعمة",
+    "footer.note":"موقع معلوماتي غير رسمي. المصادر: الحكومة الإسبانية، CEAR، البلديات."
+  },
+  ro: {
+    "brand":"Regularizare 2026",
+    "nav.what":"Ce este","nav.req":"Cerințe","nav.docs":"Documente","nav.dates":"Termene","nav.faq":"Întrebări","nav.links":"Linkuri",
+    "hero.title":"Regularizarea Extraordinară a Migranților — Spania 2026",
+    "hero.subtitle":"Informații clare, oficiale și în limba ta. Site de ajutor pentru cetățeni.",
+    "hero.disclaimer":"Site informativ. Procedurile oficiale se fac doar la inclusion.gob.es și la birourile autorizate. Nu plăti niciodată intermediari neacreditați.",
+    "what.h":"Ce este?",
+    "what.p":"Regularizarea extraordinară 2026 este un proces al Guvernului Spaniei care permite migranților deja rezidenți să obțină autorizație de ședere și muncă.",
+    "req.h":"Cerințe principale",
+    "req":["A fi în Spania înainte de data de referință stabilită prin Decretul Regal.","Fără cazier judiciar în Spania sau în țara de origine.","Pașaport sau document de identitate valabil.","Dovada șederii prin empadronamiento, certificate sau rapoarte.","Îndeplinirea cerințelor specifice căii alese (arraigo social, muncă, familie sau formare)."],
+    "req.note":"Cerințele pot varia. Consultă mereu sursa oficială.",
+    "docs.h":"Documente uzuale",
+    "docs":["Pașaport complet valabil.","Certificat istoric de empadronamiento.","Cazier judiciar din țara de origine (apostilat și tradus).","Contract de muncă sau ofertă fermă (dacă este cazul).","Raport de arraigo emis de comunitatea autonomă (dacă este cazul).","Dovada plății taxei 790-052."],
+    "dates.h":"Termene și cum se depune",
+    "dates.p":"Procedura se depune prin portalul Ministerului sau, în unele cazuri, cu programare la Biroul de Imigrări sau la oficii Correos autorizate.",
+    "dates":["Verifică Decretul Regal în BOE pentru data intrării în vigoare.","Fă programare la Biroul de Imigrări din provincia ta.","Pregătește toate documentele înainte.","Păstrează dovada de depunere: atestă data cererii."],
+    "faq.h":"Întrebări frecvente",
+    "faq":[
+      ["Am nevoie de avocat?","Nu obligatoriu. CEAR, Crucea Roșie și serviciile sociale oferă consultanță gratuită."],
+      ["Dacă am ordin de expulzare?","Fiecare caz se evaluează individual. Consultă un serviciu juridic specializat."],
+      ["Pot munci până la rezolvare?","Depinde de cale. Autorizația permite muncă după acordare."],
+      ["Dacă sunt respins?","Poți depune recurs administrativ în termenele legale."],
+      ["Unde raportez fraude?","Poliția Națională sau site-ul Ministerului."]
+    ],
+    "links.h":"Linkuri oficiale și de sprijin",
+    "footer.note":"Site informativ, neoficial. Surse: Guvernul Spaniei, CEAR, primării."
+  },
+  pt: {
+    "brand":"Regularização 2026",
+    "nav.what":"O que é","nav.req":"Requisitos","nav.docs":"Documentos","nav.dates":"Prazos","nav.faq":"FAQ","nav.links":"Links",
+    "hero.title":"Regularização Extraordinária de Migrantes — Espanha 2026",
+    "hero.subtitle":"Informação clara, oficial e no seu idioma.",
+    "hero.disclaimer":"Site informativo. Os trâmites oficiais só se fazem em inclusion.gob.es e em balcões autorizados. Nunca pague a intermediários não acreditados.",
+    "what.h":"O que é?",
+    "what.p":"A regularização extraordinária 2026 é um processo do Governo de Espanha que permite a migrantes já residentes obter autorização de residência e trabalho.",
+    "req.h":"Requisitos principais",
+    "req":["Estar em Espanha antes da data de referência do Real Decreto.","Sem antecedentes criminais em Espanha ou no país de origem.","Passaporte ou documento de identidade válido.","Comprovar tempo de permanência (empadronamiento, certificados).","Cumprir os requisitos da via escolhida (arraigo social, laboral, familiar ou formação)."],
+    "req.note":"Os requisitos variam segundo a situação. Consulte sempre a fonte oficial.",
+    "docs.h":"Documentos habituais",
+    "docs":["Passaporte completo válido.","Certificado histórico de empadronamiento.","Certificado criminal do país de origem (apostilado e traduzido).","Contrato de trabalho ou oferta firme (se aplicável).","Relatório de arraigo da comunidade autónoma (se aplicável).","Comprovativo de pagamento da taxa 790-052."],
+    "dates.h":"Prazos e como pedir",
+    "dates.p":"O pedido submete-se no portal do Ministério ou presencialmente com marcação, incluindo postos Correos autorizados.",
+    "dates":["Consulte o Real Decreto no BOE para a data de entrada em vigor.","Agende marcação no Serviço de Estrangeiros da sua província.","Prepare toda a documentação antes.","Guarde o comprovativo de entrega."],
+    "faq.h":"Perguntas frequentes",
+    "faq":[
+      ["Preciso de advogado?","Não é obrigatório. CEAR, Cruz Vermelha e serviços sociais dão apoio gratuito."],
+      ["E se tiver ordem de expulsão?","Cada caso é avaliado individualmente. Consulte apoio jurídico."],
+      ["Posso trabalhar durante a análise?","Depende da via. A autorização permite trabalhar após concessão."],
+      ["E se for indeferido?","Pode apresentar recurso administrativo dentro do prazo."],
+      ["Onde denuncio fraudes?","Polícia Nacional ou site do Ministério."]
+    ],
+    "links.h":"Links oficiais e de apoio",
+    "footer.note":"Site informativo, não oficial. Fontes: Governo de Espanha, CEAR, câmaras."
+  },
+  uk: {
+    "brand":"Легалізація 2026",
+    "nav.what":"Що це","nav.req":"Вимоги","nav.docs":"Документи","nav.dates":"Терміни","nav.faq":"Питання","nav.links":"Посилання",
+    "hero.title":"Надзвичайна легалізація мігрантів — Іспанія 2026",
+    "hero.subtitle":"Чітка, офіційна інформація вашою мовою.",
+    "hero.disclaimer":"Інформаційний сайт. Офіційні процедури — лише на inclusion.gob.es і в уповноважених офісах. Не платіть неакредитованим посередникам.",
+    "what.h":"Що це?",
+    "what.p":"Надзвичайна легалізація 2026 — це процес уряду Іспанії, який дозволяє мігрантам, які вже проживають у країні, отримати дозвіл на проживання та роботу.",
+    "req.h":"Основні вимоги",
+    "req":["Перебувати в Іспанії до дати, визначеної Королівським указом.","Відсутність судимості в Іспанії та країні походження.","Дійсний паспорт або документ, що посвідчує особу.","Підтвердження терміну перебування (padrón, довідки).","Виконання вимог обраного шляху (arraigo соціальний, трудовий, сімейний, навчальний)."],
+    "req.note":"Вимоги можуть відрізнятися. Завжди перевіряйте офіційне джерело.",
+    "docs.h":"Типові документи",
+    "docs":["Дійсний паспорт.","Історична довідка про реєстрацію (padrón).","Довідка про несудимість з країни походження (апостильована й перекладена).","Трудовий договір або тверда пропозиція (якщо застосовно).","Звіт arraigo від автономної спільноти (якщо застосовно).","Підтвердження сплати збору 790-052."],
+    "dates.h":"Терміни та як подати",
+    "dates.p":"Подання через електронний портал Міністерства або особисто за записом у бюро Correos чи імміграційному офісі.",
+    "dates":["Перевірте Королівський указ у BOE щодо дати набрання чинності.","Запишіться на прийом в імміграційному офісі провінції.","Підготуйте всі документи заздалегідь.","Збережіть квитанцію про подання."],
+    "faq.h":"Поширені запитання",
+    "faq":[
+      ["Чи потрібен адвокат?","Не обов’язково. CEAR, Червоний Хрест і соцслужби надають безкоштовну консультацію."],
+      ["Що робити з наказом про вислання?","Кожен випадок розглядається індивідуально. Зверніться до юриста."],
+      ["Чи можу працювати під час розгляду?","Залежить від шляху. Дозвіл дає право на роботу після видачі."],
+      ["Що робити в разі відмови?","Можна подати адміністративну скаргу у встановлений термін."],
+      ["Куди повідомляти про шахрайство?","Національна поліція або сайт Міністерства."]
+    ],
+    "links.h":"Офіційні та допоміжні посилання",
+    "footer.note":"Інформаційний неофіційний сайт. Джерела: Уряд Іспанії, CEAR, муніципалітети."
+  },
+  ru: {
+    "brand":"Легализация 2026",
+    "nav.what":"Что это","nav.req":"Требования","nav.docs":"Документы","nav.dates":"Сроки","nav.faq":"Вопросы","nav.links":"Ссылки",
+    "hero.title":"Чрезвычайная легализация мигрантов — Испания 2026",
+    "hero.subtitle":"Ясная, официальная информация на вашем языке.",
+    "hero.disclaimer":"Информационный сайт. Официальные процедуры только на inclusion.gob.es и в уполномоченных офисах. Не платите неаккредитованным посредникам.",
+    "what.h":"Что это?",
+    "what.p":"Чрезвычайная легализация 2026 — процесс правительства Испании, позволяющий мигрантам, уже проживающим в стране, получить разрешение на проживание и работу.",
+    "req.h":"Основные требования",
+    "req":["Находиться в Испании до даты, установленной Королевским декретом.","Отсутствие судимостей в Испании и стране происхождения.","Действительный паспорт или удостоверение личности.","Подтверждение срока пребывания (padrón, справки).","Выполнение требований выбранного пути (arraigo)."],
+    "req.note":"Требования могут различаться. Всегда проверяйте официальный источник.",
+    "docs.h":"Обычные документы",
+    "docs":["Действующий паспорт.","Историческая справка о регистрации (padrón).","Справка о несудимости из страны происхождения (апостилированная и переведённая).","Трудовой договор или твёрдое предложение (если применимо).","Отчёт arraigo от автономии (если применимо).","Квитанция об оплате пошлины 790-052."],
+    "dates.h":"Сроки и как подать",
+    "dates.p":"Подача через электронный портал Министерства или лично по записи в иммиграционном офисе либо авторизованных отделениях Correos.",
+    "dates":["Проверьте Королевский декрет в BOE.","Запишитесь на приём в иммиграционном офисе провинции.","Подготовьте все документы заранее.","Сохраните квитанцию о подаче."],
+    "faq.h":"Частые вопросы",
+    "faq":[
+      ["Нужен ли адвокат?","Необязательно. CEAR, Красный Крест и соцслужбы дают бесплатную консультацию."],
+      ["Что если есть приказ о высылке?","Каждый случай рассматривается индивидуально. Обратитесь к юристу."],
+      ["Можно ли работать во время рассмотрения?","Зависит от пути. Разрешение даёт право на работу после выдачи."],
+      ["Что делать при отказе?","Можно подать административную жалобу в срок."],
+      ["Куда сообщать о мошенничестве?","Национальная полиция или сайт Министерства."]
+    ],
+    "links.h":"Официальные и вспомогательные ссылки",
+    "footer.note":"Информационный неофициальный сайт. Источники: правительство Испании, CEAR, муниципалитеты."
+  },
+  zh: {
+    "brand":"2026特别合法化",
+    "nav.what":"简介","nav.req":"条件","nav.docs":"材料","nav.dates":"期限","nav.faq":"常见问题","nav.links":"链接",
+    "hero.title":"西班牙2026移民特别合法化",
+    "hero.subtitle":"清晰、官方、多语言的帮助信息。",
+    "hero.disclaimer":"本站仅供参考。官方手续只能通过 inclusion.gob.es 和授权机构办理。切勿向未授权的中介付费。",
+    "what.h":"什么是特别合法化？",
+    "what.p":"2026年特别合法化是西班牙政府推出的程序，让已居住在西班牙的移民获得居留和工作许可。",
+    "req.h":"主要条件",
+    "req":["在皇家法令规定的参考日期前已在西班牙。","在西班牙及原籍国无犯罪记录。","有效护照或身份证件。","证明居留时间（户籍登记padrón、证明）。","符合所选路径（社会、劳动、家庭或培训arraigo）的具体条件。"],
+    "req.note":"条件因情况而异，请以官方来源为准。",
+    "docs.h":"常见材料",
+    "docs":["有效完整护照。","历史户籍登记证明（padrón）。","原籍国无犯罪证明（加签并翻译）。","劳动合同或正式聘用（如适用）。","自治区出具的arraigo报告（如适用）。","790-052规费缴费凭证。"],
+    "dates.h":"期限与如何申请",
+    "dates.p":"通过部里的电子门户提交，或预约到外国人办公室/授权Correos网点现场提交。",
+    "dates":["在BOE查询皇家法令生效日期和申请期。","在所在省的外国人办公室预约。","提前准备好所有材料。","保留提交回执作为申请日期凭证。"],
+    "faq.h":"常见问题",
+    "faq":[
+      ["需要律师吗？","不强制。CEAR、红十字会和市政社会服务提供免费咨询。"],
+      ["如果已有驱逐令怎么办？","个案评估，请先咨询专业法律服务。"],
+      ["审理期间可以工作吗？","视路径而定。许可批准后可工作。"],
+      ["被拒怎么办？","可在法定期限内提出行政复议。"],
+      ["去哪里举报欺诈？","国家警察或部里网站。"]
+    ],
+    "links.h":"官方与支持链接",
+    "footer.note":"非官方信息网站。来源：西班牙政府、CEAR、各市政府。"
+  },
+  ur: {
+    "brand":"ریگولرائزیشن 2026",
+    "nav.what":"تعارف","nav.req":"شرائط","nav.docs":"دستاویزات","nav.dates":"مہلت","nav.faq":"سوالات","nav.links":"روابط",
+    "hero.title":"تارکینِ وطن کے لیے غیر معمولی ریگولرائزیشن — اسپین 2026",
+    "hero.subtitle":"آپ کی زبان میں واضح اور سرکاری معلومات۔",
+    "hero.disclaimer":"یہ معلوماتی سائٹ ہے۔ سرکاری کارروائی صرف inclusion.gob.es اور مجاز دفاتر میں ہوتی ہے۔ غیر مجاز ایجنٹوں کو کبھی رقم نہ دیں۔",
+    "what.h":"یہ کیا ہے؟",
+    "what.p":"2026 کی غیر معمولی ریگولرائزیشن اسپین کی حکومت کا عمل ہے جس سے پہلے سے مقیم تارکینِ وطن کو رہائشی اور کام کا اجازت نامہ مل سکتا ہے۔",
+    "req.h":"اہم شرائط",
+    "req":["شاہی فرمان کی مقررہ تاریخ سے پہلے اسپین میں موجود ہونا۔","اسپین اور ملکِ آبائی میں کوئی مجرمانہ ریکارڈ نہ ہو۔","درست پاسپورٹ یا شناختی دستاویز۔","قیام کا ثبوت (میونسپل رجسٹریشن padrón، سرٹیفکیٹ)۔","منتخب کردہ راستے (سماجی، ملازمتی، خاندانی یا تربیتی arraigo) کی شرائط۔"],
+    "req.note":"شرائط صورتِ حال کے مطابق بدل سکتی ہیں۔ ہمیشہ سرکاری ذریعہ دیکھیں۔",
+    "docs.h":"عام دستاویزات",
+    "docs":["درست مکمل پاسپورٹ۔","تاریخی padrón سرٹیفکیٹ۔","ملکِ آبائی کا مجرمانہ ریکارڈ (تصدیق و ترجمہ شدہ)۔","ملازمت کا معاہدہ یا پکی پیشکش (اگر قابلِ اطلاق ہو)۔","خودمختار علاقے کی arraigo رپورٹ (اگر قابلِ اطلاق ہو)۔","فیس 790-052 کی ادائیگی کی رسید۔"],
+    "dates.h":"مہلت اور درخواست کیسے دیں",
+    "dates.p":"وزارت کے آن لائن پورٹل کے ذریعے یا اپوائنٹمنٹ کے ساتھ امیگریشن آفس / مجاز Correos دفاتر میں جمع کرائیں۔",
+    "dates":["BOE میں شاہی فرمان سے نافذ العمل تاریخ دیکھیں۔","اپنے صوبے کے امیگریشن آفس میں اپوائنٹمنٹ لیں۔","جانے سے پہلے تمام دستاویزات تیار رکھیں۔","جمع کرانے کی رسید سنبھال کر رکھیں۔"],
+    "faq.h":"اکثر پوچھے گئے سوالات",
+    "faq":[
+      ["کیا وکیل ضروری ہے؟","لازمی نہیں۔ CEAR، ہلالِ احمر اور میونسپل سوشل سروسز مفت رہنمائی دیتے ہیں۔"],
+      ["اگر جلاوطنی کا حکم ہو تو؟","ہر کیس الگ جانچا جاتا ہے۔ ماہر قانونی خدمات سے رجوع کریں۔"],
+      ["کارروائی کے دوران کام کر سکتا ہوں؟","راستے پر منحصر ہے۔ منظوری کے بعد کام کی اجازت ہوتی ہے۔"],
+      ["درخواست مسترد ہو جائے تو؟","قانونی مدت میں انتظامی اپیل دائر کر سکتے ہیں۔"],
+      ["دھوکہ دہی کی شکایت کہاں کروں؟","نیشنل پولیس یا وزارت کی ویب سائٹ۔"]
+    ],
+    "links.h":"سرکاری و معاون روابط",
+    "footer.note":"معلوماتی، غیر سرکاری سائٹ۔ ذرائع: حکومتِ اسپین، CEAR، بلدیات۔"
+  },
+  wo: {
+    "brand":"Regularisaasion 2026",
+    "nav.what":"Lu mu di","nav.req":"Li ñu laaj","nav.docs":"Kayit yi","nav.dates":"Waxtu","nav.faq":"Laaj yu bari","nav.links":"Jokkoo",
+    "hero.title":"Regularisaasion bu rëy ngir ñi ñëw — Españ 2026",
+    "hero.subtitle":"Xibaar yu leer, yu ofisieel, ci sa làkk.",
+    "hero.disclaimer":"Site bi xibaar rekk la. Trawaa yu ofisieel ci inclusion.gob.es la ak biro yu ñu jox ndigal. Bul fey ku wax ne dafa mën a jàppale te jàppalekat dëkkul.",
+    "what.h":"Lu mu di?",
+    "what.p":"Regularisaasion bu rëy 2026 dafa di ay jëf gobernement bu Españ, ngir ñi bokk ci Españ jot dëgg-dëgg ndax dëkk ak liggéey.",
+    "req.h":"Li ñu laaj",
+    "req":["Nekk Españ bi bës bi ñu fal ci dekrè bi dikkul.","Amul ndëkkeel ci Españ walla ci réew mi nga jóge.","Pasepoor walla kayit njàng bu yàgg.","Firnde ci waxtu nga toog (padrón, atesta).","Matal li ñu laaj ci yoon wi nga tànn (arraigo sosyaal, liggéey, njabóot walla jàng)."],
+    "req.note":"Li ñu laaj mën na soppeeku. Saytuleen source bu ofisieel.",
+    "docs.h":"Kayit yu bari",
+    "docs":["Pasepoor bu yàgg.","Padrón istorik.","Sertifika ndëkkeel bu réew mi nga jóge (apostille ak tekki).","Kontara liggéey walla ofs bu wóor (su aju).","Rapor arraigo komunotaa otonom bi (su aju).","Faktiir tàkk bi 790-052."],
+    "dates.h":"Waxtu ak nu mu tàmblee",
+    "dates.p":"Jaar ci portail internet bu Ministeer bi, walla ak rendez-vous ci biro Estranjeeri walla Correos.",
+    "dates":["Xoolal dekrè bi ci BOE ngir xam bi mu tàmblee.","Taxaw rendez-vous ci biro Estranjeeri bu sa proviins.","Defaral kayit yépp bala nga dem.","Denc resiibo bu yónnee."],
+    "faq.h":"Laaj yu bari",
+    "faq":[
+      ["Ndax dama war avoka?","Déet. CEAR, Croix-Rouge ak serwiis sosyaal yu komin day jàppale ci jamono amul pay."],
+      ["Su ma amee ndigal dagg?","Kaas bu nekk ñu di ko xool. Saytul avoka."],
+      ["Ndax man naa liggéey ci waxtu saytu?","Aju ci yoon wi. Ngir liggéey war a am otorisaasioŋ bi."],
+      ["Su ñu bañee?","Mën nga def recours amiñistratif ci jamono."],
+      ["Fu ma war a yónnee yoqute?","Polis Nasional walla web bu Ministeer."]
+    ],
+    "links.h":"Jokkoo yu ofisieel",
+    "footer.note":"Site xibaar, du ofisieel. Source: Gobernement Españ, CEAR, meeri."
+  },
+  bn: {
+    "brand":"রেগুলারাইজেশন ২০২৬",
+    "nav.what":"পরিচিতি","nav.req":"শর্ত","nav.docs":"কাগজপত্র","nav.dates":"সময়সীমা","nav.faq":"প্রশ্ন","nav.links":"লিংক",
+    "hero.title":"অভিবাসীদের জন্য বিশেষ রেগুলারাইজেশন — স্পেন ২০২৬",
+    "hero.subtitle":"আপনার ভাষায় স্পষ্ট ও সরকারি তথ্য।",
+    "hero.disclaimer":"এটি একটি তথ্যমূলক সাইট। সরকারি কার্যক্রম শুধু inclusion.gob.es ও অনুমোদিত অফিসে হয়। অনিবন্ধিত মধ্যস্থতাকারীকে টাকা দেবেন না।",
+    "what.h":"এটা কী?",
+    "what.p":"২০২৬ সালের বিশেষ রেগুলারাইজেশন স্পেন সরকারের একটি প্রক্রিয়া যা ইতিমধ্যে স্পেনে বসবাসকারী অভিবাসীদের বসবাস ও কাজের অনুমতি পেতে সহায়তা করে।",
+    "req.h":"মূল শর্তাবলি",
+    "req":["রয়্যাল ডিক্রি নির্ধারিত তারিখের আগে স্পেনে উপস্থিতি।","স্পেন বা নিজ দেশে কোনো অপরাধমূলক রেকর্ড না থাকা।","বৈধ পাসপোর্ট বা পরিচয়পত্র।","অবস্থানকালের প্রমাণ (padrón নিবন্ধন, সনদ)।","নির্বাচিত পথের (সামাজিক, কর্ম, পারিবারিক বা প্রশিক্ষণ arraigo) শর্ত পূরণ।"],
+    "req.note":"পরিস্থিতি অনুযায়ী শর্ত ভিন্ন হতে পারে। সরকারি উৎস দেখুন।",
+    "docs.h":"সাধারণ কাগজপত্র",
+    "docs":["বৈধ পূর্ণ পাসপোর্ট।","ঐতিহাসিক padrón সনদ।","নিজ দেশের অপরাধমুক্ত সনদ (অ্যাপোস্টিল ও অনুবাদিত)।","চাকরির চুক্তি বা নিশ্চিত অফার (প্রযোজ্য হলে)।","স্বায়ত্তশাসিত অঞ্চলের arraigo রিপোর্ট (প্রযোজ্য হলে)।","৭৯০-০৫২ ফি পরিশোধের রসিদ।"],
+    "dates.h":"সময়সীমা ও আবেদন পদ্ধতি",
+    "dates.p":"মন্ত্রণালয়ের অনলাইন পোর্টাল অথবা অ্যাপয়েন্টমেন্টসহ ইমিগ্রেশন অফিস / অনুমোদিত Correos শাখায় জমা দিন।",
+    "dates":["BOE-তে রয়্যাল ডিক্রি দেখে কার্যকর তারিখ জানুন।","নিজের প্রদেশের ইমিগ্রেশন অফিসে অ্যাপয়েন্টমেন্ট নিন।","সব কাগজপত্র আগে প্রস্তুত করুন।","জমা দেওয়ার রসিদ সংরক্ষণ করুন।"],
+    "faq.h":"সাধারণ প্রশ্ন",
+    "faq":[
+      ["আইনজীবী লাগবে কি?","বাধ্যতামূলক নয়। CEAR, রেড ক্রস ও মিউনিসিপ্যাল সামাজিক সেবা বিনামূল্যে পরামর্শ দেয়।"],
+      ["বহিষ্কারাদেশ থাকলে?","প্রতিটি কেস আলাদাভাবে মূল্যায়ন হয়। বিশেষজ্ঞ আইনজীবীর পরামর্শ নিন।"],
+      ["প্রক্রিয়া চলাকালে কাজ করা যাবে?","পথের উপর নির্ভর করে। অনুমোদনের পর কাজের অধিকার মেলে।"],
+      ["প্রত্যাখ্যাত হলে?","আইনি সময়সীমার মধ্যে প্রশাসনিক আপিল দায়ের করা যায়।"],
+      ["প্রতারণার অভিযোগ কোথায়?","ন্যাশনাল পুলিশ বা মন্ত্রণালয়ের ওয়েবসাইটে।"]
+    ],
+    "links.h":"সরকারি ও সহায়ক লিংক",
+    "footer.note":"তথ্যমূলক, বেসরকারি সাইট। সূত্র: স্পেন সরকার, CEAR, পৌরসভা।"
+  }
+};
+
+// Supplementary keys (nav.vuln, nav.map, vuln.*, map.*, voice.*, nonprofit) merged into each lang
+const SUPPLEMENT = {
+  es:{nonprofit:"Web de ayuda ciudadana · sin ánimo de lucro · independiente","nav.vuln":"Vulnerabilidad","nav.map":"Oficinas","vuln.h":"Certificado de Vulnerabilidad","vuln.p":"El informe o certificado de vulnerabilidad acredita tu situación social o económica y puede facilitar trámites de regularización, prestaciones o ayudas. No sustituye a los requisitos del expediente pero lo refuerza.","vuln.who.h":"¿Quién puede solicitarlo?","vuln.who":["Personas en riesgo de exclusión social acreditado.","Víctimas de violencia de género o trata.","Familias con menores a cargo en situación precaria.","Personas sin domicilio estable o con insuficiencia de ingresos."],"vuln.how.h":"¿Cómo se solicita?","vuln.how":["Solicita cita en los Servicios Sociales de tu ayuntamiento.","Acude con la documentación requerida.","La trabajadora social elabora el informe tras valoración.","Plazo medio: 2–6 semanas según municipio."],"vuln.docs.h":"Documentación habitual","vuln.docs":["Documento de identidad o pasaporte.","Empadronamiento.","Justificantes de ingresos y gastos.","Informe médico o de víctima si procede."],"vuln.note":"El informe lo emiten los Servicios Sociales del ayuntamiento donde estés empadronado/a. Es gratuito.","map.h":"Oficinas de Extranjería y cita previa","map.p":"Mapa con las principales Oficinas de Extranjería en España. La cita previa es obligatoria y se pide en la web oficial.","map.cta":"Pedir cita previa (web oficial)","map.cta2":"Ver directorio oficial","map.note":"Ubicaciones aproximadas. Confirma dirección y horario en la web oficial antes de acudir.","voice.title":"Asistente de voz","voice.hint":"Pulsa el micrófono y pregunta: requisitos, documentos, plazos, cita, vulnerabilidad, abogado, rechazo, fraude.","voice.listen":"Hablar","voice.stop":"Parar","voice.unsupported":"Tu navegador no soporta reconocimiento de voz. Usa Chrome o Edge.","voice.none":"No he encontrado una respuesta. Consulta las secciones o los enlaces oficiales.","voice.listening":"Escuchando…","footer.note":"Web informativa, independiente y sin ánimo de lucro. Fuentes: Gobierno de España, CEAR, Ayuntamientos."},
+  ca:{nonprofit:"Web d'ajuda ciutadana · sense ànim de lucre · independent","nav.vuln":"Vulnerabilitat","nav.map":"Oficines","vuln.h":"Certificat de Vulnerabilitat","vuln.p":"L'informe de vulnerabilitat acredita la teva situació social o econòmica i pot facilitar tràmits de regularització i ajuts.","vuln.who.h":"Qui pot sol·licitar-lo?","vuln.who":["Persones en risc d'exclusió social.","Víctimes de violència masclista o tràfic.","Famílies amb menors a càrrec en situació precària.","Persones sense domicili estable o sense ingressos suficients."],"vuln.how.h":"Com es sol·licita?","vuln.how":["Demana cita als Serveis Socials del teu ajuntament.","Porta la documentació requerida.","La treballadora social redacta l'informe.","Termini: 2–6 setmanes."],"vuln.docs.h":"Documentació habitual","vuln.docs":["Document d'identitat o passaport.","Empadronament.","Justificants d'ingressos i despeses.","Informe mèdic o de víctima si escau."],"vuln.note":"L'emeten els Serveis Socials municipals. És gratuït.","map.h":"Oficines d'Estrangeria i cita prèvia","map.p":"Mapa amb les principals Oficines d'Estrangeria d'Espanya. La cita prèvia és obligatòria.","map.cta":"Demanar cita prèvia","map.cta2":"Directori oficial","map.note":"Ubicacions aproximades. Confirma a la web oficial.","voice.title":"Assistent de veu","voice.hint":"Prem el micròfon i pregunta: requisits, documents, terminis, cita, vulnerabilitat, advocat.","voice.listen":"Parlar","voice.stop":"Aturar","voice.unsupported":"El teu navegador no suporta reconeixement de veu.","voice.none":"No he trobat resposta. Consulta les seccions o els enllaços oficials.","voice.listening":"Escoltant…","footer.note":"Web informativa, independent i sense ànim de lucre."},
+  en:{nonprofit:"Citizen help website · non-profit · independent","nav.vuln":"Vulnerability","nav.map":"Offices","vuln.h":"Vulnerability Certificate","vuln.p":"The vulnerability report certifies your social or economic situation and can support regularization, benefits or aid applications.","vuln.who.h":"Who can request it?","vuln.who":["People at proven risk of social exclusion.","Victims of gender violence or trafficking.","Families with dependent minors in precarious conditions.","People without stable housing or with insufficient income."],"vuln.how.h":"How to request it?","vuln.how":["Book an appointment at your town's Social Services.","Bring the required documents.","A social worker assesses and writes the report.","Average wait: 2–6 weeks."],"vuln.docs.h":"Common documents","vuln.docs":["ID or passport.","Padrón registration.","Proof of income and expenses.","Medical or victim report if applicable."],"vuln.note":"Issued free of charge by the municipal Social Services where you are registered.","map.h":"Immigration Offices and appointments","map.p":"Map of main Immigration Offices in Spain. Appointment is mandatory via the official website.","map.cta":"Book appointment (official)","map.cta2":"Official directory","map.note":"Approximate locations. Confirm address and opening hours on the official site.","voice.title":"Voice assistant","voice.hint":"Tap the mic and ask: requirements, documents, deadlines, appointment, vulnerability, lawyer, rejection, fraud.","voice.listen":"Speak","voice.stop":"Stop","voice.unsupported":"Your browser does not support voice recognition. Use Chrome or Edge.","voice.none":"I didn't find an answer. Check the sections or the official links.","voice.listening":"Listening…","footer.note":"Informational, independent, non-profit site."},
+  fr:{nonprofit:"Site d'aide citoyenne · à but non lucratif · indépendant","nav.vuln":"Vulnérabilité","nav.map":"Bureaux","vuln.h":"Certificat de Vulnérabilité","vuln.p":"Le rapport de vulnérabilité atteste votre situation sociale ou économique et peut faciliter les démarches.","vuln.who.h":"Qui peut le demander ?","vuln.who":["Personnes en risque d'exclusion sociale.","Victimes de violences ou de traite.","Familles avec mineurs à charge.","Personnes sans logement stable ou sans revenus suffisants."],"vuln.how.h":"Comment le demander ?","vuln.how":["Prenez rendez-vous aux Services Sociaux de votre mairie.","Apportez les documents requis.","L'assistante sociale rédige le rapport.","Délai : 2–6 semaines."],"vuln.docs.h":"Documents habituels","vuln.docs":["Pièce d'identité ou passeport.","Empadronamiento.","Justificatifs de revenus et dépenses.","Rapport médical ou de victime le cas échéant."],"vuln.note":"Émis gratuitement par les Services Sociaux municipaux.","map.h":"Bureaux des Étrangers et rendez-vous","map.p":"Carte des principaux bureaux des étrangers en Espagne. Rendez-vous obligatoire via le site officiel.","map.cta":"Prendre rendez-vous","map.cta2":"Annuaire officiel","map.note":"Emplacements approximatifs. Vérifiez sur le site officiel.","voice.title":"Assistant vocal","voice.hint":"Appuyez sur le micro et demandez : conditions, documents, délais, rendez-vous, avocat.","voice.listen":"Parler","voice.stop":"Arrêter","voice.unsupported":"Votre navigateur ne prend pas en charge la reconnaissance vocale.","voice.none":"Je n'ai pas trouvé de réponse. Consultez les sections ou les liens.","voice.listening":"Écoute…","footer.note":"Site informatif, indépendant et à but non lucratif."},
+  ar:{nonprofit:"موقع مساعدة للمواطنين · غير ربحي · مستقل","nav.vuln":"هشاشة","nav.map":"المكاتب","vuln.h":"شهادة الهشاشة","vuln.p":"تقرير الهشاشة يوثّق وضعك الاجتماعي أو الاقتصادي ويسهّل الإجراءات.","vuln.who.h":"من يمكنه طلبها؟","vuln.who":["الأشخاص المعرضون لخطر الإقصاء الاجتماعي.","ضحايا العنف أو الاتجار بالبشر.","العائلات التي ترعى قاصرين في أوضاع هشة.","من لا يملك سكناً مستقراً أو دخلاً كافياً."],"vuln.how.h":"كيف تُطلب؟",
+"vuln.how":["احجز موعداً لدى الخدمات الاجتماعية البلدية.","أحضر الوثائق المطلوبة.","تُعدّ الأخصائية الاجتماعية التقرير بعد التقييم.","المدة: 2–6 أسابيع."],"vuln.docs.h":"الوثائق المعتادة","vuln.docs":["وثيقة هوية أو جواز.","شهادة التسجيل البلدي.","إثبات الدخل والنفقات.","تقرير طبي أو إثبات ضحية عند الاقتضاء."],"vuln.note":"يُصدَر مجاناً من الخدمات الاجتماعية البلدية.","map.h":"مكاتب الهجرة والمواعيد","map.p":"خريطة لأهم مكاتب الهجرة في إسبانيا. الموعد إلزامي عبر الموقع الرسمي.","map.cta":"حجز موعد (الموقع الرسمي)","map.cta2":"الدليل الرسمي","map.note":"مواقع تقريبية. تحقق من الموقع الرسمي.","voice.title":"المساعد الصوتي","voice.hint":"اضغط الميكروفون واسأل: الشروط، الوثائق، الموعد، الهشاشة.","voice.listen":"تحدث","voice.stop":"إيقاف","voice.unsupported":"متصفحك لا يدعم التعرف على الصوت.","voice.none":"لم أجد إجابة. راجع الأقسام أو الروابط الرسمية.","voice.listening":"جارٍ الاستماع…","footer.note":"موقع معلوماتي مستقل غير ربحي."},
+  ro:{nonprofit:"Site de ajutor cetățenesc · nonprofit · independent","nav.vuln":"Vulnerabilitate","nav.map":"Birouri","vuln.h":"Certificat de Vulnerabilitate","vuln.p":"Raportul de vulnerabilitate atestă situația ta socială sau economică și poate susține cererile.","vuln.who.h":"Cine poate solicita?","vuln.who":["Persoane cu risc de excluziune socială.","Victime ale violenței sau traficului.","Familii cu minori în condiții precare.","Persoane fără locuință stabilă sau venituri suficiente."],"vuln.how.h":"Cum se solicită?","vuln.how":["Programare la Serviciile Sociale ale primăriei.","Adu documentele solicitate.","Asistentul social întocmește raportul.","Durată: 2–6 săptămâni."],"vuln.docs.h":"Documente uzuale","vuln.docs":["Act de identitate sau pașaport.","Padrón.","Dovezi de venit și cheltuieli.","Raport medical sau de victimă, dacă este cazul."],"vuln.note":"Se emite gratuit de Serviciile Sociale municipale.","map.h":"Birouri de Imigrări și programări","map.p":"Harta principalelor birouri de imigrări din Spania. Programarea este obligatorie.","map.cta":"Fă programare (oficial)","map.cta2":"Director oficial","map.note":"Locații aproximative.","voice.title":"Asistent vocal","voice.hint":"Apasă microfonul și întreabă: cerințe, documente, termene, programare.","voice.listen":"Vorbește","voice.stop":"Oprește","voice.unsupported":"Browserul tău nu suportă recunoaștere vocală.","voice.none":"Nu am găsit un răspuns. Verifică secțiunile sau linkurile.","voice.listening":"Ascult…","footer.note":"Site informativ, independent, nonprofit."},
+  pt:{nonprofit:"Site de ajuda cidadã · sem fins lucrativos · independente","nav.vuln":"Vulnerabilidade","nav.map":"Balcões","vuln.h":"Certificado de Vulnerabilidade","vuln.p":"O relatório atesta a sua situação social ou económica.","vuln.who.h":"Quem pode pedir?","vuln.who":["Pessoas em risco de exclusão social.","Vítimas de violência ou tráfico.","Famílias com menores em situação precária.","Pessoas sem habitação estável ou sem rendimentos."],"vuln.how.h":"Como pedir?","vuln.how":["Agende nos Serviços Sociais do município.","Leve os documentos.","A assistente social elabora o relatório.","Prazo: 2–6 semanas."],"vuln.docs.h":"Documentos habituais","vuln.docs":["Documento de identificação.","Padrón.","Comprovativos de rendimentos e despesas.","Relatório médico se aplicável."],"vuln.note":"Gratuito, emitido pelos Serviços Sociais municipais.","map.h":"Balcões de Estrangeiros e marcação","map.p":"Mapa dos principais balcões em Espanha. Marcação obrigatória.","map.cta":"Marcar (oficial)","map.cta2":"Diretório oficial","map.note":"Localizações aproximadas.","voice.title":"Assistente de voz","voice.hint":"Prima o microfone e pergunte: requisitos, documentos, marcação.","voice.listen":"Falar","voice.stop":"Parar","voice.unsupported":"O seu navegador não suporta reconhecimento de voz.","voice.none":"Não encontrei resposta. Veja as secções ou links.","voice.listening":"A ouvir…","footer.note":"Site informativo, independente e sem fins lucrativos."},
+  uk:{nonprofit:"Сайт громадської допомоги · неприбутковий · незалежний","nav.vuln":"Вразливість","nav.map":"Офіси","vuln.h":"Свідоцтво про вразливість","vuln.p":"Звіт засвідчує ваше соціальне чи економічне становище.","vuln.who.h":"Хто може подати?","vuln.who":["Особи з ризиком соціального виключення.","Жертви насильства чи торгівлі людьми.","Родини з неповнолітніми у скрутних умовах.","Особи без стабільного житла чи достатнього доходу."],"vuln.how.h":"Як подати?","vuln.how":["Запис у соцслужбу муніципалітету.","Принесіть документи.","Соцпрацівник складає звіт.","Термін: 2–6 тижнів."],"vuln.docs.h":"Типові документи","vuln.docs":["Документ, що посвідчує особу.","Padrón.","Підтвердження доходів та витрат.","Медичний звіт за потреби."],"vuln.note":"Безкоштовно, видає муніципальна соцслужба.","map.h":"Імміграційні офіси та записи","map.p":"Мапа основних офісів в Іспанії. Запис обов’язковий.","map.cta":"Записатися (офіційно)","map.cta2":"Офіційний каталог","map.note":"Приблизні місця.","voice.title":"Голосовий помічник","voice.hint":"Натисніть мікрофон і запитайте: вимоги, документи, запис.","voice.listen":"Говорити","voice.stop":"Стоп","voice.unsupported":"Браузер не підтримує розпізнавання мови.","voice.none":"Не знайшов відповіді. Перегляньте розділи або посилання.","voice.listening":"Слухаю…","footer.note":"Інформаційний неприбутковий незалежний сайт."},
+  ru:{nonprofit:"Сайт гражданской помощи · некоммерческий · независимый","nav.vuln":"Уязвимость","nav.map":"Офисы","vuln.h":"Справка об уязвимости","vuln.p":"Отчёт подтверждает ваше социальное или экономическое положение.","vuln.who.h":"Кто может подать?","vuln.who":["Лица в риске социального исключения.","Жертвы насилия или торговли людьми.","Семьи с несовершеннолетними в трудных условиях.","Лица без стабильного жилья или достаточного дохода."],"vuln.how.h":"Как подать?","vuln.how":["Запись в соцслужбу муниципалитета.","Принесите документы.","Соцработник составляет отчёт.","Срок: 2–6 недель."],"vuln.docs.h":"Обычные документы","vuln.docs":["Удостоверение личности.","Padrón.","Справки о доходах и расходах.","Медсправка или справка жертвы при необходимости."],"vuln.note":"Бесплатно, выдаёт муниципальная соцслужба.","map.h":"Иммиграционные офисы и запись","map.p":"Карта главных офисов в Испании. Запись обязательна.","map.cta":"Записаться (официально)","map.cta2":"Официальный каталог","map.note":"Приблизительные местоположения.","voice.title":"Голосовой помощник","voice.hint":"Нажмите микрофон и спросите: требования, документы, запись.","voice.listen":"Говорить","voice.stop":"Стоп","voice.unsupported":"Браузер не поддерживает распознавание речи.","voice.none":"Ответ не найден. Проверьте разделы или ссылки.","voice.listening":"Слушаю…","footer.note":"Информационный независимый некоммерческий сайт."},
+  zh:{nonprofit:"公民互助网站 · 非营利 · 独立","nav.vuln":"脆弱性","nav.map":"办公室","vuln.h":"脆弱性证明","vuln.p":"脆弱性报告证明您的社会或经济状况，有助于申请。","vuln.who.h":"谁可以申请？","vuln.who":["面临社会排斥风险的人。","性别暴力或人口贩运受害者。","处境困难且有未成年人的家庭。","无固定住所或收入不足者。"],"vuln.how.h":"如何申请？","vuln.how":["在市政社会服务处预约。","携带所需文件。","社工评估并出具报告。","一般2–6周。"],"vuln.docs.h":"常见材料","vuln.docs":["身份证件。","padrón户籍。","收入与支出证明。","必要时医学或受害证明。"],"vuln.note":"由您登记地的市政社会服务免费出具。","map.h":"外国人办公室与预约","map.p":"西班牙主要外国人办公室地图。预约必须通过官方网站。","map.cta":"预约（官方）","map.cta2":"官方名录","map.note":"位置为大致。","voice.title":"语音助手","voice.hint":"点击麦克风并提问：条件、材料、预约、脆弱性。","voice.listen":"说话","voice.stop":"停止","voice.unsupported":"您的浏览器不支持语音识别。","voice.none":"未找到答案，请查看页面或官方链接。","voice.listening":"正在聆听…","footer.note":"非官方、独立、非营利的信息网站。"},
+  ur:{nonprofit:"شہری مدد ویب سائٹ · غیر منفعتی · خودمختار","nav.vuln":"کمزوری","nav.map":"دفاتر","vuln.h":"کمزوری کا سرٹیفکیٹ","vuln.p":"کمزوری کی رپورٹ آپ کی سماجی یا معاشی صورتحال کی تصدیق کرتی ہے۔","vuln.who.h":"کون درخواست دے سکتا ہے؟","vuln.who":["سماجی اخراج کے خطرے میں افراد۔","صنفی تشدد یا انسانی اسمگلنگ کے متاثرین۔","نابالغ بچوں والے کمزور خاندان۔","مستحکم رہائش یا کافی آمدنی نہ رکھنے والے۔"],"vuln.how.h":"کیسے درخواست دیں؟","vuln.how":["میونسپل سوشل سروسز میں اپوائنٹمنٹ لیں۔","مطلوبہ دستاویزات ساتھ لائیں۔","سوشل ورکر رپورٹ تیار کرتی ہیں۔","مدت: 2–6 ہفتے۔"],"vuln.docs.h":"عام دستاویزات","vuln.docs":["شناختی دستاویز۔","padrón۔","آمدن و اخراجات کے ثبوت۔","ضرورت ہو تو طبی یا متاثر رپورٹ۔"],"vuln.note":"آپ کے رجسٹرڈ بلدیہ کی سوشل سروسز مفت جاری کرتی ہے۔","map.h":"امیگریشن دفاتر اور اپوائنٹمنٹ","map.p":"اسپین کے بڑے دفاتر کا نقشہ۔ اپوائنٹمنٹ لازمی ہے۔","map.cta":"اپوائنٹمنٹ لیں (سرکاری)","map.cta2":"سرکاری ڈائریکٹری","map.note":"تخمینی مقامات۔","voice.title":"صوتی معاون","voice.hint":"مائیک دبا کر پوچھیں: شرائط، دستاویزات، اپوائنٹمنٹ۔","voice.listen":"بولیں","voice.stop":"رکیں","voice.unsupported":"آپ کا براؤزر صوتی شناخت سپورٹ نہیں کرتا۔","voice.none":"جواب نہیں ملا۔ حصے یا روابط دیکھیں۔","voice.listening":"سن رہا ہوں…","footer.note":"معلوماتی، خودمختار، غیر منفعتی سائٹ۔"},
+  wo:{nonprofit:"Site ndimbal cosaan · amul benefice · bu bopp","nav.vuln":"Lëwukaay","nav.map":"Biro yi","vuln.h":"Sertifika Lëwukaay","vuln.p":"Rapor bi firndeel sa doole ci mbir mi ak koom-koom.","vuln.who.h":"Kan mën koo laaj?","vuln.who":["Ñi mën a génn ci mbokk mi.","Victimes yu doole lu bon walla traitcaay.","Njaboot yu am xale yu néew doole.","Ñi amul dëkkuwaay bu yag walla yëgle bu doy."],"vuln.how.h":"Naka la koy laaj?","vuln.how":["Taxaw rendez-vous ci Serwiis Sosyaal yu komin.","Yóbbu kayit yi.","Travayer sosyaal bi mu defar rapor bi.","Waxtu: 2–6 ayubés."],"vuln.docs.h":"Kayit yu bari","vuln.docs":["Kayit njàng.","padrón.","Firnde ci yëgle ak soxla.","Rapor dokter walla victim su aju."],"vuln.note":"Serwiis Sosyaal yu komin day bind ko amul pay.","map.h":"Biro Estranjeeri ak rendez-vous","map.p":"Kartu biro yu mag yi ci Españ. Rendez-vous war na, ci web bu ofisieel.","map.cta":"Taxaw rendez-vous (ofisieel)","map.cta2":"Rëpërtwar ofisieel","map.note":"Bérëb yu jege.","voice.title":"Jàppalekat bu baat","voice.hint":"Bësal mik te laaj: li ñu laaj, kayit yi, rendez-vous.","voice.listen":"Wax","voice.stop":"Taxaw","voice.unsupported":"Sa naviguer menul sopi baat.","voice.none":"Gisuma tontu. Xoolal section yi walla lien yi.","voice.listening":"Maa ngi dégg…","footer.note":"Site xibaar bu bopp, amul benefice."},
+  bn:{nonprofit:"নাগরিক সহায়তা সাইট · অলাভজনক · স্বাধীন","nav.vuln":"ভঙ্গুরতা","nav.map":"অফিস","vuln.h":"ভঙ্গুরতা সনদ","vuln.p":"এই প্রতিবেদন আপনার সামাজিক বা অর্থনৈতিক অবস্থার প্রমাণ দেয়।","vuln.who.h":"কে আবেদন করতে পারে?","vuln.who":["সামাজিকভাবে ঝুঁকিগ্রস্ত ব্যক্তি।","লিঙ্গভিত্তিক সহিংসতা বা পাচারের শিকার।","নাবালকসহ দুর্বল অবস্থার পরিবার।","স্থায়ী আবাস বা যথেষ্ট আয়হীন ব্যক্তি।"],"vuln.how.h":"কীভাবে আবেদন করবেন?","vuln.how":["পৌর সামাজিক সেবায় অ্যাপয়েন্টমেন্ট নিন।","প্রয়োজনীয় কাগজ নিয়ে যান।","সমাজকর্মী প্রতিবেদন তৈরি করেন।","সময়: ২–৬ সপ্তাহ।"],"vuln.docs.h":"সাধারণ কাগজপত্র","vuln.docs":["পরিচয়পত্র।","padrón।","আয়-ব্যয়ের প্রমাণ।","প্রযোজ্য হলে চিকিৎসা বা শিকার সনদ।"],"vuln.note":"আপনার নিবন্ধিত পৌরসভার সামাজিক সেবা বিনামূল্যে দেয়।","map.h":"ইমিগ্রেশন অফিস ও অ্যাপয়েন্টমেন্ট","map.p":"স্পেনের প্রধান অফিসগুলির মানচিত্র। অ্যাপয়েন্টমেন্ট বাধ্যতামূলক।","map.cta":"অ্যাপয়েন্টমেন্ট (অফিসিয়াল)","map.cta2":"অফিসিয়াল ডিরেক্টরি","map.note":"আনুমানিক অবস্থান।","voice.title":"ভয়েস সহকারী","voice.hint":"মাইক টিপে জিজ্ঞাসা করুন: শর্ত, কাগজপত্র, অ্যাপয়েন্টমেন্ট।","voice.listen":"বলুন","voice.stop":"থামান","voice.unsupported":"আপনার ব্রাউজার ভয়েস শনাক্ত সমর্থন করে না।","voice.none":"উত্তর পাইনি। বিভাগ বা লিংক দেখুন।","voice.listening":"শুনছি…","footer.note":"তথ্যমূলক, স্বাধীন, অলাভজনক সাইট।"}
+};
+Object.keys(SUPPLEMENT).forEach(l => { if (I18N[l]) Object.assign(I18N[l], SUPPLEMENT[l]); });
+
+function render(lang) {
+  const t = I18N[lang] || I18N.es;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang === "ar" || lang === "ur") ? "rtl" : "ltr";
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const k = el.getAttribute("data-i18n");
+    if (typeof t[k] === "string") el.textContent = t[k];
+  });
+  document.getElementById("nonprofit-badge").textContent = t.nonprofit || "";
+  document.getElementById("req-list").innerHTML = t.req.map(x => `<li>${x}</li>`).join("");
+  document.getElementById("docs-list").innerHTML = t.docs.map(x => `<li>${x}</li>`).join("");
+  document.getElementById("dates-list").innerHTML = t.dates.map(x => `<li>${x}</li>`).join("");
+  document.getElementById("vuln-who").innerHTML = (t["vuln.who"]||[]).map(x => `<li>${x}</li>`).join("");
+  document.getElementById("vuln-how").innerHTML = (t["vuln.how"]||[]).map(x => `<li>${x}</li>`).join("");
+  document.getElementById("vuln-docs").innerHTML = (t["vuln.docs"]||[]).map(x => `<li>${x}</li>`).join("");
+  document.getElementById("faq-list").innerHTML = t.faq.map(([q,a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("");
+  try { localStorage.setItem("lang", lang); } catch(e){}
+}
+
+const sel = document.getElementById("lang");
+const saved = (()=>{ try{return localStorage.getItem("lang");}catch(e){return null;} })();
+const nav = (navigator.language||"es").slice(0,2);
+const initial = saved || (I18N[nav] ? nav : "es");
+sel.value = initial;
+render(initial);
+sel.addEventListener("change", e => { render(e.target.value); initMap(); });
+
+// ---------- Mapa Leaflet ----------
+const OFFICES = [
+  ["Madrid — Oficina de Extranjería", 40.4165, -3.7026],
+  ["Barcelona — Oficina de Extranjería", 41.3874, 2.1686],
+  ["Valencia — Oficina de Extranjería", 39.4699, -0.3763],
+  ["Sevilla — Oficina de Extranjería", 37.3891, -5.9845],
+  ["Zaragoza — Oficina de Extranjería", 41.6488, -0.8891],
+  ["Málaga — Oficina de Extranjería", 36.7213, -4.4214],
+  ["Murcia — Oficina de Extranjería", 37.9922, -1.1307],
+  ["Palma de Mallorca", 39.5696, 2.6502],
+  ["Bilbao — Oficina de Extranjería", 43.2630, -2.9350],
+  ["Alicante — Oficina de Extranjería", 38.3452, -0.4810],
+  ["Las Palmas de Gran Canaria", 28.1248, -15.4300],
+  ["Santa Cruz de Tenerife", 28.4636, -16.2518],
+  ["Granada", 37.1773, -3.5986],
+  ["A Coruña", 43.3623, -8.4115],
+  ["Valladolid", 41.6523, -4.7245],
+  ["Pamplona", 42.8125, -1.6458],
+  ["Santander", 43.4623, -3.8099],
+  ["San Sebastián", 43.3183, -1.9812]
+];
+let _map;
+function initMap() {
+  if (!window.L || _map) return;
+  _map = L.map('map').setView([40.2, -3.7], 5.4);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18, attribution: '© OpenStreetMap'
+  }).addTo(_map);
+  OFFICES.forEach(([name, lat, lng]) => {
+    L.marker([lat, lng]).addTo(_map)
+      .bindPopup(`<strong>${name}</strong><br><a href="https://icp.administracionelectronica.gob.es/icpplus/index.html" target="_blank" rel="noopener">Pedir cita previa</a>`);
+  });
+}
+window.addEventListener('load', initMap);
+
+// ---------- Asistente de voz ----------
+const BCP = { es:"es-ES", ca:"ca-ES", en:"en-US", fr:"fr-FR", ar:"ar-SA", ro:"ro-RO", pt:"pt-PT", uk:"uk-UA", ru:"ru-RU", zh:"zh-CN", ur:"ur-PK", wo:"fr-FR", bn:"bn-BD" };
+function norm(s){ return (s||"").toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^\p{L}\p{N}\s]/gu,' '); }
+function tokens(s){ return norm(s).split(/\s+/).filter(w => w.length > 2); }
+
+// Intent keywords per lang → section/FAQ index hint
+const INTENTS = {
+  es:{requisito:"req",documento:"docs",papel:"docs",plazo:"dates",fecha:"dates",cita:"map",oficina:"map",mapa:"map",vulnerabilidad:"vuln",vulnerable:"vuln",abogado:0,expulsion:1,trabajar:2,rechaz:3,fraud:4},
+  ca:{requisit:"req",document:"docs",paper:"docs",termini:"dates",data:"dates",cita:"map",oficina:"map",mapa:"map",vulnerabilitat:"vuln",advocat:0,expulsio:1,treballar:2,deneg:3,frau:4},
+  en:{requirement:"req",document:"docs",paper:"docs",deadline:"dates",date:"dates",appointment:"map",office:"map",map:"map",vulnerability:"vuln",lawyer:0,expulsion:1,deport:1,work:2,rejected:3,reject:3,fraud:4,scam:4},
+  fr:{condition:"req",document:"docs",papier:"docs",delai:"dates",date:"dates",rendezvous:"map",bureau:"map",carte:"map",vulnerabilite:"vuln",avocat:0,expulsion:1,travailler:2,refus:3,fraude:4},
+  ar:{شرط:"req",وثيقة:"docs",مستند:"docs",موعد:"map",مكتب:"map",خريطة:"map",هشاشة:"vuln",محامي:0,ابعاد:1,عمل:2,رفض:3,احتيال:4},
+  ro:{cerinte:"req",document:"docs",termen:"dates",programare:"map",birou:"map",harta:"map",vulnerabilitate:"vuln",avocat:0,expulzare:1,munca:2,respins:3,frauda:4},
+  pt:{requisito:"req",documento:"docs",prazo:"dates",marcacao:"map",balcao:"map",mapa:"map",vulnerabilidade:"vuln",advogado:0,expulsao:1,trabalhar:2,indeferido:3,fraude:4},
+  uk:{вимог:"req",документ:"docs",термін:"dates",запис:"map",офіс:"map",мапа:"map",вразлив:"vuln",адвокат:0,вислан:1,роботи:2,відмов:3,шахрайств:4},
+  ru:{требован:"req",документ:"docs",срок:"dates",запис:"map",офис:"map",карта:"map",уязвим:"vuln",адвокат:0,высылк:1,работ:2,отказ:3,мошеннич:4},
+  zh:{条件:"req",材料:"docs",文件:"docs",期限:"dates",预约:"map",办公室:"map",地图:"map",脆弱:"vuln",律师:0,驱逐:1,工作:2,拒绝:3,欺诈:4},
+  ur:{شرط:"req",دستاویز:"docs",مہلت:"dates",اپوائنٹمنٹ:"map",دفتر:"map",نقشہ:"map",کمزور:"vuln",وکیل:0,ملک:1,کام:2,مسترد:3,فریب:4},
+  wo:{requis:"req",kayit:"docs",waxtu:"dates",rendez:"map",biro:"map",kartu:"map",lewukaay:"vuln",avoka:0,dagg:1,liggeey:2,bañ:3,yoqute:4},
+  bn:{শর্ত:"req",কাগজ:"docs",সময়:"dates",অ্যাপয়েন্টমেন্ট:"map",অফিস:"map",মানচিত্র:"map",ভঙ্গুর:"vuln",আইনজীবী:0,বহিষ্কার:1,কাজ:2,প্রত্যাখ্যাত:3,প্রতারণা:4}
+};
+
+function findAnswer(lang, utterance) {
+  const t = I18N[lang] || I18N.es;
+  const u = (utterance||"").toLowerCase();
+  const intents = INTENTS[lang] || INTENTS.es;
+  // 1) Intent exact keyword match
+  for (const kw of Object.keys(intents)) {
+    if (u.includes(kw.toLowerCase())) {
+      const target = intents[kw];
+      if (typeof target === "number" && t.faq[target]) return t.faq[target][1];
+      if (target === "req") return (t["req.h"]||"") + ": " + t.req.slice(0,3).join(" · ");
+      if (target === "docs") return (t["docs.h"]||"") + ": " + t.docs.slice(0,3).join(" · ");
+      if (target === "dates") return (t["dates.h"]||"") + ": " + t.dates.slice(0,2).join(" · ");
+      if (target === "map") return t["map.p"] || "";
+      if (target === "vuln") return t["vuln.p"] || "";
+    }
+  }
+  // 2) Token overlap with FAQ questions
+  const uTok = new Set(tokens(u));
+  let best = null, bestScore = 0;
+  t.faq.forEach(([q,a]) => {
+    const qTok = tokens(q);
+    const overlap = qTok.filter(w => uTok.has(w)).length;
+    if (overlap > bestScore) { bestScore = overlap; best = a; }
+  });
+  if (bestScore >= 1) return best;
+  return null;
+}
+
+const vBtn = document.getElementById("voice-btn");
+const vPanel = document.getElementById("voice-panel");
+const vClose = document.getElementById("voice-close");
+const vListen = document.getElementById("voice-listen");
+const vStop = document.getElementById("voice-stop");
+const vLog = document.getElementById("voice-log");
+const vUnsupp = document.getElementById("voice-unsupported");
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+let recog = null;
+function logLine(cls, text) {
+  const div = document.createElement("div");
+  div.className = cls;
+  div.textContent = text;
+  vLog.appendChild(div);
+  vLog.scrollTop = vLog.scrollHeight;
+}
+function speak(text, lang) {
+  try {
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = BCP[lang] || "es-ES";
+    speechSynthesis.cancel();
+    speechSynthesis.speak(u);
+  } catch(e){}
+}
+vBtn.addEventListener("click", () => {
+  vPanel.classList.toggle("hidden");
+  if (!SR) vUnsupp.classList.remove("hidden");
+});
+vClose.addEventListener("click", () => vPanel.classList.add("hidden"));
+vListen.addEventListener("click", () => {
+  if (!SR) { vUnsupp.classList.remove("hidden"); return; }
+  const lang = sel.value;
+  recog = new SR();
+  recog.lang = BCP[lang] || "es-ES";
+  recog.interimResults = false;
+  recog.maxAlternatives = 1;
+  logLine("text-slate-500 italic", I18N[lang]["voice.listening"] || "…");
+  recog.onresult = (ev) => {
+    const transcript = ev.results[0][0].transcript;
+    logLine("text-slate-900 font-medium", "🗣 " + transcript);
+    const answer = findAnswer(lang, transcript) || I18N[lang]["voice.none"];
+    logLine("text-teal-800", "🤖 " + answer);
+    speak(answer, lang);
+  };
+  recog.onerror = (e) => logLine("text-amber-700", "⚠ " + e.error);
+  recog.start();
+});
+vStop.addEventListener("click", () => { try{recog && recog.stop();}catch(e){} try{speechSynthesis.cancel();}catch(e){} });
+</script>
+</body>
+</html>
