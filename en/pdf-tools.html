@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Merge and Compress PDF Online Free — Tools for Spain Immigration</title>
+<title>Merge and Compress PDF Online Free, Tools for Spain Immigration</title>
 <meta name="description" content="Free, private tools to merge PDFs and reduce their size to fit Mercurio and Spain Immigration upload limits. Everything runs in your browser: your documents never leave your device."/>
 <link rel="canonical" href="./pdf-tools.html"/>
 <link rel="alternate" hreflang="es" href="../herramientas-pdf.html"/>
@@ -30,8 +30,8 @@ button.go:hover{background:#115e59} button.go:disabled{background:#94a3b8}
 
 <div class="bg-amber-100 border-b border-amber-300 text-amber-900 text-sm">
   <div class="max-w-5xl mx-auto px-4 py-2 flex items-start gap-2">
-    <span>ℹ️</span>
-    <p><strong>Unofficial site.</strong> This non-profit citizen website only gathers and links information published on official government sites. It does not handle procedures or replace the Ministry. <a href="./legal.html" class="underline font-semibold">Legal notice & privacy →</a></p>
+    <span>️</span>
+    <p><strong>Unofficial site.</strong> We gather public information and link to official sources. We do not handle any procedure. <a href="./legal.html" class="underline font-semibold">Legal notice & privacy </a></p>
   </div>
 </div>
 
@@ -72,7 +72,7 @@ button.go:hover{background:#115e59} button.go:disabled{background:#94a3b8}
 
 <section class="mt-10"><a href="./index.html" class="inline-block bg-teal-700 hover:bg-teal-800 text-white font-semibold px-5 py-3 rounded">← Back to the guide</a></section>
 </main>
-<footer class="border-t bg-white mt-12"><div class="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-600 flex flex-col md:flex-row justify-between gap-2"><span>Informational, independent, non-profit website.</span><span>© 2026</span></div></footer>
+<footer class="border-t bg-white mt-12"><div class="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-600 flex flex-col md:flex-row justify-between gap-2"><span>Non-profit volunteer project.</span><span>© 2026</span></div></footer>
 
 <script>
 function setupDrop(drop, input, onFiles) {
@@ -94,7 +94,7 @@ let mergeFiles = [];
 const mDrop = document.getElementById('merge-drop'), mInput = document.getElementById('merge-input'), mList = document.getElementById('merge-list'), mGo = document.getElementById('merge-go'), mStat = document.getElementById('merge-status');
 document.getElementById('merge-clear').addEventListener('click', () => { mergeFiles = []; renderMerge(); });
 setupDrop(mDrop, mInput, files => { mergeFiles = mergeFiles.concat(files); renderMerge(); });
-function renderMerge() { mList.innerHTML = mergeFiles.map((f,i)=>`<li>${i+1}. ${f.name} — ${fmt(f.size)}</li>`).join(''); mGo.disabled = mergeFiles.length < 2; }
+function renderMerge() { mList.innerHTML = mergeFiles.map((f,i)=>`<li>${i+1}. ${f.name}, ${fmt(f.size)}</li>`).join(''); mGo.disabled = mergeFiles.length < 2; }
 mGo.addEventListener('click', async () => {
   if (!window.PDFLib) { mStat.textContent = 'Loading library…'; return; }
   mStat.textContent = 'Processing…';
@@ -111,7 +111,7 @@ mGo.addEventListener('click', async () => {
 });
 let cFile = null;
 const cDrop = document.getElementById('compress-drop'), cInput = document.getElementById('compress-input'), cInfo = document.getElementById('compress-info'), cGo = document.getElementById('compress-go'), cStat = document.getElementById('compress-status');
-setupDrop(cDrop, cInput, files => { cFile = files[0]; cInfo.textContent = cFile ? `${cFile.name} — ${fmt(cFile.size)}` : ''; cGo.disabled = !cFile; });
+setupDrop(cDrop, cInput, files => { cFile = files[0]; cInfo.textContent = cFile ? `${cFile.name}, ${fmt(cFile.size)}` : ''; cGo.disabled = !cFile; });
 cGo.addEventListener('click', async () => {
   if (!window.PDFLib || !cFile) return;
   cStat.textContent = 'Optimizing…';
