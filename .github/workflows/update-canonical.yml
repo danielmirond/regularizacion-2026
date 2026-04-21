@@ -1,12 +1,16 @@
 name: Update canonical domains
 on:
-  workflow_dispatch:  # se ejecuta de forma manual desde la pestaña "Actions"
+  workflow_dispatch:  # se ejecuta manualmente
+
+permissions:
+  contents: write     # habilita al token para hacer push
 
 jobs:
   replace:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Replace canonical domains
         run: |
@@ -15,13 +19,12 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet; then
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
             echo "No hay cambios que publicar"
           else
-            git commit -am "chore: update canonical domain"
+            git commit -m "chore: update canonical domain"
             git push
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
