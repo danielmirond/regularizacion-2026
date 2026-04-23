@@ -1,0 +1,16 @@
+{
+  "name": "regularizacion-2026",
+  "version": "1.0.0",
+  "description": "Guía informativa sobre la regularización extraordinaria 2026",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'Static HTML site - no build needed'",
+    "dev": "echo 'Use a local server to test'"
+  },
+  "keywords": ["regularizacion", "spain", "immigration"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
