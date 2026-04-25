@@ -13,7 +13,7 @@ html,body{font-family:'Inter',sans-serif} h1,h2,h3,.font-display{font-family:'Fr
 .prose h2{font-size:1.5rem;font-weight:700;margin-top:2rem;margin-bottom:.5rem;color:#134e4a}
 .prose h3{font-size:1.1rem;font-weight:600;color:#115e59;margin-top:1rem}
 .prose p{line-height:1.7;margin:.5rem 0} .prose ul{list-style:disc;padding-inline-start:1.5rem;margin:.5rem 0}
-</style><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><script async src="https://www.googletagmanager.com/gtag/js?id=G-SJPLXTYRJL"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag(`js`,new Date());gtag(`config`,`G-SJPLXTYRJL`);</script></head>
+</style><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("consent","default",{ad_storage:"denied",analytics_storage:"denied",functionality_storage:"granted",security_storage:"granted",wait_for_update:500});try{if(localStorage.getItem("cc")==="1")gtag("consent","update",{analytics_storage:"granted"})}catch(e){}gtag("js",new Date());gtag("config","G-SJPLXTYRJL",{anonymize_ip:true})</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-SJPLXTYRJL"></script></head>
 <body class="bg-slate-50 text-slate-800">
 <header class="bg-white border-b"><div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
 <a href="./index.html" class="flex items-center gap-2"><span class="inline-block w-8 h-8 rounded bg-teal-700 text-white grid place-items-center font-bold font-display">i</span><strong>Regularización 2026</strong></a>
@@ -44,7 +44,8 @@ html,body{font-family:'Inter',sans-serif} h1,h2,h3,.font-display{font-family:'Fr
 
 <section><h2>4. Política de privacidad</h2>
 <h3>4.1 Qué datos recogemos</h3>
-<p><strong>Ninguno.</strong> Esta web no recopila datos personales. No hay formularios de contacto, no hay registro, no hay analytics, no hay publicidad, no hay tracking de ningún tipo.</p>
+<p>Si <strong>aceptas</strong> el banner de cookies, usamos <strong>Google Analytics 4</strong> para medir visitas de forma agregada y anonimizada (IP truncada, sin perfilado publicitario). Si rechazas o ignoras el banner, no se carga ninguna cookie analítica.</p>
+<p>No hay formularios de contacto, ni registro, ni publicidad, ni venta de datos.</p>
 
 <h3>4.2 Almacenamiento local</h3>
 <p>Se usa <code>localStorage</code> del navegador únicamente para <strong>recordar tu idioma preferido</strong>. No sale de tu dispositivo. Puedes borrarlo desde el menú de tu navegador en cualquier momento.</p>
@@ -63,8 +64,9 @@ html,body{font-family:'Inter',sans-serif} h1,h2,h3,.font-display{font-family:'Fr
 </section>
 
 <section><h2>5. Cookies</h2>
-<p>Esta web <strong>no utiliza cookies de ningún tipo</strong>: ni propias, ni de terceros, ni técnicas, ni analíticas, ni publicitarias. Por tanto, no se requiere ni se muestra banner de consentimiento de cookies (conforme a la Guía AEPD sobre el uso de cookies de noviembre de 2023).</p>
-<p>El uso de <code>localStorage</code> para el idioma es técnico y está exento, igual que lo estaría una cookie estrictamente necesaria.</p></section>
+<p>Esta web usa cookies <strong>solo si aceptas</strong> en el banner inferior:</p>
+<ul><li><strong>Cookies estrictamente necesarias</strong> (siempre activas): <code>localStorage</code> para recordar tu idioma y tu elección de cookies. No requieren consentimiento.</li><li><strong>Cookies analíticas (Google Analytics 4)</strong>: solo se cargan si pulsas <em>Aceptar</em>. Permiten medir visitas y páginas más vistas, sin identificarte. Puedes revocar el consentimiento borrando los datos de tu navegador.</li></ul>
+<p>Configuración por defecto = <strong>denegado</strong> (Google Consent Mode v2). Cumple con la Guía AEPD sobre cookies de noviembre de 2023.</p></section>
 
 <section><h2>6. Derechos de las personas usuarias</h2>
 <p>Al no recoger datos personales, no procede el ejercicio de derechos de acceso, rectificación, supresión u oposición (RGPD / LOPDGDD). Si crees que hay algún contenido erróneo o desactualizado, escríbenos y lo corregimos.</p></section>
@@ -78,4 +80,4 @@ html,body{font-family:'Inter',sans-serif} h1,h2,h3,.font-display{font-family:'Fr
 <section class="mt-10"><a href="./index.html" class="inline-block bg-teal-700 hover:bg-teal-800 text-white font-semibold px-5 py-3 rounded">← Volver al inicio</a></section>
 </main>
 <footer class="border-t bg-white mt-12"><div class="max-w-5xl mx-auto px-4 py-6 text-sm text-slate-600 flex flex-col md:flex-row justify-between gap-2"><span>Proyecto sin ánimo de lucro.</span><span>© 2026</span></div></footer>
-</body></html>
+<div id="cc" style="position:fixed;bottom:0;left:0;right:0;background:#0f766e;color:#fff;padding:12px 16px;font-family:system-ui,sans-serif;font-size:14px;z-index:9999;display:none;box-shadow:0 -2px 10px rgba(0,0,0,.15)"><div style="max-width:1024px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between"><span>Usamos cookies analíticas (Google Analytics) solo si aceptas. <a href="/aviso-legal" style="text-decoration:underline;color:#fff">Más info</a>.</span><span><button onclick="ccDeny()" style="background:transparent;border:1px solid #fff;color:#fff;padding:6px 12px;border-radius:4px;margin-right:6px;cursor:pointer">Rechazar</button><button onclick="ccAccept()" style="background:#fbbf24;color:#0f766e;border:0;padding:6px 14px;border-radius:4px;font-weight:600;cursor:pointer">Aceptar</button></span></div></div><script>(function(){try{if(!localStorage.getItem("cc")){var b=document.getElementById("cc");if(b)b.style.display="block"}}catch(e){}})();function ccAccept(){try{localStorage.setItem("cc","1")}catch(e){}if(window.gtag)gtag("consent","update",{analytics_storage:"granted"});document.getElementById("cc").style.display="none"}function ccDeny(){try{localStorage.setItem("cc","0")}catch(e){}document.getElementById("cc").style.display="none"}</script></body></html>
