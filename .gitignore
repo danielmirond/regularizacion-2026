@@ -1,0 +1,6 @@
+.DS_Store
+.env.local
+.env*
+.vercel/
+node_modules/
+regularizacion-2026/
